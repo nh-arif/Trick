@@ -19,6 +19,8 @@ from rich.prompt import Prompt
 from rich.progress import track
 from rich.rule import Rule
 
+min_game_time = 40
+max_game_time = 80
 
 def calc(i, s, a, o, d, g):
     st = (10 * i + max(0, 1200 - 10 * s) + 2000) * (1 + o / a) / 10
@@ -36,20 +38,20 @@ def value(input_str):
 
 def animate_banner():
     banner = [
-        "███  ██ ██  ██   ███ ",
-        "████ ██ ██  ██  ██ ██ ",
-        "██ ████ ██████ ███████ ",
-        "██  ███ ██  ██ ██   ██ ",
-        "██   ██ ██  ██ ██   ██ "
+        "███  ██   ███  ██  ██ ██ █████",
+        "████ ██ ██  ██ ██  ██ ██ ██  ██",
+        "██ ████ ██████ ██████ ██ ██   █",
+        "██  ███ ██  ██ ██  ██ ██ ██  ██",
+        "██   ██ ██  ██ ██  ██ ██ █████"
     ]
     
     colors = ["cyan", "blue", "green", "yellow", "magenta", "red"]
     
-    for _ in range(6):  # Animate for 10 cycles
+    for _ in range(5):  # Animate for 4 cycles
         for i, line in enumerate(banner):
             color = colors[i % len(colors)]
             rprint(f"[{color}]{line}[/{color}]")
-        time.sleep(0.4)
+        time.sleep(0.2)
         os.system('cls' if os.name == 'nt' else 'clear')
         colors = colors[1:] + [colors[0]]  # Rotate colors
 
@@ -136,8 +138,6 @@ class ByBit:
 
     def score_win(self):
             try:
-                min_game_time = 10
-                max_game_time = 40
                 game_time = random.randint(min_game_time, max_game_time)
                 playgame = self.session.post("https://api.bybitcoinsweeper.com/api/games/start", json={}, headers=self.headers).json()
                 if "message" in playgame:
@@ -187,8 +187,6 @@ class ByBit:
 
     def score_lose(self):
             try:
-                min_game_time = 10
-                max_game_time = 40
                 game_time = random.randint(min_game_time, max_game_time)
                 playgame = self.session.post("https://api.bybitcoinsweeper.com/api/games/start", json={}, headers=self.headers).json()
                 if "message" in playgame:
@@ -243,7 +241,6 @@ class ByBit:
         os.system('cls' if os.name == 'nt' else 'clear')
         animate_banner()
         animate_header_footer()
-        
         while True:
             console = Console()
             menu_table = Table(show_header=False, box=ROUNDED, border_style="cyan", width=60)
@@ -253,7 +250,6 @@ class ByBit:
 
     def start_process(self):
         os.system('cls' if os.name == 'nt' else 'clear')
-        animate_banner()
         data_file = os.path.join(os.path.dirname(__file__), 'data.txt')
         with open(data_file, 'r', encoding='utf8') as f:
             data = [line.strip() for line in f if line.strip()]
