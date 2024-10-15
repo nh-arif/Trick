@@ -19,8 +19,8 @@ from rich.prompt import Prompt
 from rich.progress import track
 from rich.rule import Rule
 
-min_game_time = 40
-max_game_time = 80
+min_game_time = 25
+max_game_time = 75
 
 def calc(i, s, a, o, d, g):
     st = (10 * i + max(0, 1200 - 10 * s) + 2000) * (1 + o / a) / 10
@@ -59,15 +59,13 @@ def animate_header_footer():
     header = "ByBit Sweeper"
     body = "Welcome to Coin sweeper"
     footer = "Proceed with caution..."
-    
-    for _ in range(2):  # Animate for 5 cycles
-        rprint(Panel(f"[cyan]{header}[/cyan]", border_style="cyan"))
-        time.sleep(0.3)
-        rprint(Panel(f"[green]{body}[/green]", border_style="green"))
-        time.sleep(0.3)
-        rprint(Panel(f"[yellow]{footer}[/yellow]", border_style="yellow"))
-        time.sleep(0.3)
-        os.system('cls' if os.name == 'nt' else 'clear')
+    rprint(Panel(f"[cyan]{header}[/cyan]", border_style="cyan"))
+    time.sleep(0.3)
+    rprint(Panel(f"[green]{body}[/green]", border_style="green"))
+    time.sleep(0.3)
+    rprint(Panel(f"[yellow]{footer}[/yellow]", border_style="yellow"))
+    time.sleep(0.4)
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 def animated_input(prompt):
     for char in prompt:
