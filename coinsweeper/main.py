@@ -19,8 +19,8 @@ from rich.prompt import Prompt
 from rich.progress import track
 from rich.rule import Rule
 
-min_game_time = 25
-max_game_time = 75
+min_game_time = 40
+max_game_time = 80
 
 def calc(i, s, a, o, d, g):
     st = (10 * i + max(0, 1200 - 10 * s) + 2000) * (1 + o / a) / 10
