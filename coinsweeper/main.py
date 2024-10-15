@@ -45,11 +45,11 @@ def animate_banner():
     
     colors = ["cyan", "blue", "green", "yellow", "magenta", "red"]
     
-    for _ in range(10):  # Animate for 10 cycles
+    for _ in range(6):  # Animate for 10 cycles
         for i, line in enumerate(banner):
             color = colors[i % len(colors)]
             rprint(f"[{color}]{line}[/{color}]")
-        time.sleep(0.5)
+        time.sleep(0.4)
         os.system('cls' if os.name == 'nt' else 'clear')
         colors = colors[1:] + [colors[0]]  # Rotate colors
 
@@ -136,8 +136,8 @@ class ByBit:
 
     def score_win(self):
             try:
-                min_game_time = 40
-                max_game_time = 80
+                min_game_time = 10
+                max_game_time = 40
                 game_time = random.randint(min_game_time, max_game_time)
                 playgame = self.session.post("https://api.bybitcoinsweeper.com/api/games/start", json={}, headers=self.headers).json()
                 if "message" in playgame:
@@ -187,8 +187,8 @@ class ByBit:
 
     def score_lose(self):
             try:
-                min_game_time = 40
-                max_game_time = 80
+                min_game_time = 10
+                max_game_time = 40
                 game_time = random.randint(min_game_time, max_game_time)
                 playgame = self.session.post("https://api.bybitcoinsweeper.com/api/games/start", json={}, headers=self.headers).json()
                 if "message" in playgame:
