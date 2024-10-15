@@ -1,0 +1,13 @@
+WiFi: "Wizard" pass:  223334444 
+WiFi: "VC BAUST" pass:  vc@baust 
+WiFi: "Ri_F_AT" pass:  rifrifrif 
+WiFi: "Nahid" pass:  Nahid@6462 
+WiFi: "RUMAN" pass:  Ruman@1306033 
+WiFi: "M.Nahid" pass:  Nahid@6462 
+WiFi: "GP Router" pass:  81827583 
+WiFi: "Diamonds" pass:  Nazir@62947 
+WiFi: "COMPUTER MANIA BD" pass:  CMANIA2024 
+WiFi: "BAUST LIBRARY " pass:  library@baust 
+WiFi: "BAUST" pass:  admin222 
+WiFi: "Adiba" pass:  64626462 
+WiFi: "ASIF" pass:  Password Nai 

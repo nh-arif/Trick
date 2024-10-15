@@ -1,0 +1,1 @@
+user=%7B%22id%22%3A1759442322%2C%22first_name%22%3A%22Md.%20Nahid%22%2C%22last_name%22%3A%22Hasan%20Arif%22%2C%22username%22%3A%22NH_Arif%22%2C%22language_code%22%3A%22en%22%2C%22allows_write_to_pm%22%3Atrue%7D&chat_instance=-7454911887519932779&chat_type=sender&auth_date=1728651567&hash=1abdcb2a0539de40cdab1a52a0e96a25a2f871f6c1b049691bfb754e33098374
