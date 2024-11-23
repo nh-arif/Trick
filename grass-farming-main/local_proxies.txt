@@ -1,0 +1,6 @@
+http://10.0.0.1:8080
+http://proxyuser:proxypass@10.0.0.2:8000
+socks4://172.16.0.1:1080
+socks4://user123:password123@172.16.0.2:1080
+socks5://192.168.100.1:1080
+socks5://guest:guest123@192.168.100.2:1080
